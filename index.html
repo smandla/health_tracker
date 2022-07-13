@@ -10,6 +10,12 @@
     />
     <link
       rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"
       integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ=="
       crossorigin="anonymous"
@@ -47,101 +53,157 @@
           <article class="tile is-child notification filter_section">
             <div class="content">
               <p class="title">Filter Search</p>
-              <input
-                class="input"
-                type="text"
-                placeholder="Search Recipe"
-              />
-              <br />
+              <form id="form">
+                <input
+                  class="input"
+                  type="text"
+                  placeholder="Search Recipe"
+                  id="search_input"
+                />
 
-              <div class="container diet" >
-                <div>
-                  <label class="is-size-5">Fruits</label>
-
-                  <br />
-                  <label>
-                    <input type="checkbox" />
-                    Low-Carb
-                  </label>
-
-                  <label class="checkbox">
-                    <input type="checkbox" />
-                    High-Protein
-                  </label>
-
-                  <label class="checkbox">
-                    <input type="checkbox" />
-                    High-Fiber
-                  </label>
-                </div>
                 <br />
-                <div class="container cuisine" >
+
+                <div class="container diet" id="diet">
+                  <div>
+                    <label class="is-size-5">Diet</label>
+
+                    <br />
+                    
+                    <div class="dropdown is-hoverable">
+                      <div class="dropdown-trigger">
+                        <button
+                          class="button diet_dropdown"
+                          aria-haspopup="true"
+                          aria-controls="dropdown-menu4"
+                        >
+                          <span>Choose Diet</span>
+                          <span class="icon is-small">
+                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                          </span>
+                        </button>
+                      </div>
+
+                      <div
+                        class="dropdown-menu"
+                        id="dropdown-menu4"
+                        role="menu"
+                      >
+                        <div
+                          class="dropdown-content"
+                          id="diet_dropdown_content"
+                        >
+                  </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="container cuisine">
                     <div>
                       <label class="is-size-5">Cuisine </label>
-    
+  
                       <br />
-                      <label>
-                        <input type="checkbox" />
-                        Asian
-                      </label>
-    
-                      <label class="checkbox">
-                        <input type="checkbox" />
-                        American
-                      </label>
-    
-                      <label class="checkbox">
-                        <input type="checkbox" />
-                        Indian
-                      </label>
+                      <div class="dropdown is-hoverable d">
+                        <div class="dropdown-trigger e">
+                          <button
+                            class="button diet_dropdown"
+                            aria-haspopup="true"
+                            aria-controls="dropdown-menu4"
+                          >
+                            <span id="cuisineVal">Choose Cuisine</span>
+                            <span class="icon is-small">
+                              <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                          </button>
+                        </div>
+  
+                        <div
+                          class="dropdown-menu"
+                          id="dropdown-menu4"
+                          role="menu"
+                        >
+                          <div
+                            class="dropdown-content"
+                            id="cuisine_dropdown_content"
+                          ></div>
+                        </div>
+                      </div>
                     </div>
-                    <br/>
-                    <div class="container meal_type" >
-                        <div>
-                          <label class="is-size-5">Meal Type</label>
-        
-                          <br />
-                          <label class="checkbox">
-                            <input type="checkbox" />
-                            Breakfast
-                          </label>
-                          <label>
-                            <input type="checkbox" />
-                            Lunch
-                          </label>
-        
-                          <label class="checkbox">
-                            <input type="checkbox" />
-                            Dinner
-                          </label>
-        
-                        
-                        </div>
-                        </div>
-                        <br/>
-                        <div>
-                            <label class="is-size-5">Calories</label>
-                            <input class="slider is-fullwidth is-small is-circle" step="1" min="0" max="100" value="50" type="range"/>
-                        </div>
-              </div>
+                    
+                <br />
+                <div class="container cuisine">
+                  <div>
+                    <label class="is-size-5">Health </label>
+
+                    <br />
+                    <div class="dropdown is-hoverable d">
+                      <div class="dropdown-trigger e">
+                        <button
+                          class="button diet_dropdown"
+                          aria-haspopup="true"
+                          aria-controls="dropdown-menu4"
+                        >
+                          <span>Choose Health Type</span>
+                          <span class="icon is-small">
+                            <i class="fas fa-angle-down" aria-hidden="true"></i>
+                          </span>
+                        </button>
+                      </div>
+
+                      <div
+                        class="dropdown-menu"
+                        id="dropdown-menu4"
+                        role="menu"
+                      >
+                        <div
+                          class="dropdown-content"
+                          id="health_dropdown_content"
+                        ></div>
+                      </div>
+                    </div>
+                  </div>
+                  <br />
+                  <div class="container meal_type">
+                    <div>
+                      <label class="is-size-5">Meal Type</label>
+
+                      <br />
+                      <div id="meal"></div>
+                    </div>
+                  </div>
+                  <br />
+                  <div>
+                    <label class="is-size-5">Calories</label>
+                    <div>
+                      <input
+                        class="slider is-fullwidth has-output is-small is-circle"
+                        step="1"
+                        min="0"
+                        max="1000"
+                        value="50"
+                        type="range"
+                        id="sliderMedium"
+                      />
+                      <output for="sliderMedium" id="sliderMediumTooltip"
+                        >50</output
+                      >
+                    </div>
+                  </div>
+                </div>
+                <button type="submit" class="button search_btn" id="search_btn">Search</button>
+              </form>
             </div>
           </article>
         </div>
         <div class="line"></div>
 
-
-
-       <!--  /********************   RECIPES    ********************/  -->
-        <div class="tile is-parent is-vertical is-9 ">
+        <!--  /********************   RECIPES    ********************/  -->
+        <div class="tile is-parent is-vertical is-9">
           <article class="tile is-child notification recipe_section">
             <div class="content">
               <p class="title">Recipes</p>
               <!-- <p class="subtitle">With even more content</p> -->
-             
-              <div class="card_container" id="card_container">
-               
-                  
-              </div>
+
+              <div class="card_container" id="card_container"></div>
             </div>
           </article>
         </div>

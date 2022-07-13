@@ -10,6 +10,9 @@ body {
   background-color: black;
   height: 100%;
 }
+body::-webkit-scrollbar {
+  display: none;
+}
 header {
   background-color: #121212;
 }
@@ -32,22 +35,36 @@ header {
   border: 1px solid rgba(255, 255, 255, 0.2);
   margin: 10px 0;
 }
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
-}
-.checkmark {
-  border-radius: 8px;
-  /* color: red; */
-  background: transparent;
-}
+
 .card_container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 0.5em;
   background: transparent;
 }
-.g {
-  /* background-color: green; */
+#diet {
+  /* background: red; */
+  width: 100%;
+}
+.diet_dropdown {
+  width: 100%;
+  /* back */
+}
+.diet_dropdown span {
+  /* background: black; */
+  color: black;
+}
+span {
+  color: black;
+  width: 100%;
+  /* fill: black; */
+  /* background: red; */
+}
+i {
+  color: black;
+}
+.dropdown-item p {
+  color: black;
 }
 .r {
   background: rgba(255, 255, 255, 0.1);
@@ -77,4 +94,27 @@ header {
 }
 .recipe_section {
   background-color: black;
+}
+.search_btn {
+  background: transparent;
+  border: 1px solid #a6fe00;
+  color: #a6fe00;
+}
+.search_btn:hover {
+  background-color: #a6fe00;
+  color: black;
+  border: 1px solid #a6fe00;
+}
+.button {
+  margin: 5px;
+}
+#meal {
+  white-space: nowrap;
+  display: inline-block;
+  overflow-x: scroll;
+  width: 100%;
+  /* overflow-x: scroll; */
+}
+#meal::-webkit-scrollbar {
+  display: none;
 }
