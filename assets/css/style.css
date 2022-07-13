@@ -1,0 +1,77 @@
+* {
+  color: #fefefe;
+}
+html {
+  background-color: black;
+  height: 100%;
+}
+body {
+  background-color: black;
+  height: 100%;
+}
+header {
+  background-color: #121212;
+}
+.title {
+  color: #fefefe;
+  padding: 10px;
+}
+.link {
+  color: #f71a4f;
+  padding: 10px;
+}
+.grid {
+  height: 100%;
+  padding: 10px;
+}
+.columns {
+  padding: 10px;
+}
+.line {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin: 10px 0;
+}
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.checkmark {
+  border-radius: 8px;
+  /* color: red; */
+  background: transparent;
+}
+.card_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 0.5em;
+  background: transparent;
+}
+.g {
+  /* background-color: green; */
+}
+.r {
+  background: rgba(255, 255, 255, 0.1);
+  /* background-color: red; */
+  position: absolute;
+  /* display: flex; */
+  /* justify-content: bottom; */
+  /* align-items: bottom; */
+  bottom: 0;
+  left: 0;
+  height: 10%;
+  width: 100%;
+  padding: 0;
+}
+.bottom {
+  position: absolute;
+  /* background-color: green; */
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  color: black;
+}
+.filter_section {
+  background-color: rgba(255, 255, 255, 0.06);
+}
+.recipe_section {
+  background-color: black;
+}

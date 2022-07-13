@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Health Tracker</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.4/css/bulma.min.css"
+      integrity="sha512-HqxHUkJM0SYcbvxUw5P60SzdOTy/QVwA1JJrvaXJv4q7lmbDZCmZaqz01UPOaQveoxfYRv1tHozWGPMcuTBuvQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="level">
+        <p class="level-item has-text-centered">
+          <span class="title">Health Tracker</span>
+        </p>
+        <p class="level-item has-text-centered">
+          <a class="link is-info">Exercise</a>
+        </p>
+        <p class="level-item has-text-centered">
+          <a class="link is-info">Recipes</a>
+        </p>
+
+        <p class="level-item has-text-centered">
+          <a class="link is-info">Nutrition</a>
+        </p>
+        <p class="level-item has-text-centered">
+          <a class="link is-info">Shopping List</a>
+        </p>
+        <p class="level-item has-text-centered">
+          <a class="link is-info">Planner</a>
+        </p>
+      </nav>
+    </header>
+    <main>
+      <div class="tile is-ancestor grid">
+        <div class="tile is-parent is-vertical is-3">
+          <article class="tile is-child notification filter_section">
+            <div class="content">
+              <p class="title">Filter Search</p>
+              <input
+                class="input"
+                type="text"
+                placeholder="Search Recipe"
+              />
+              <br />
+
+              <div class="container diet" >
+                <div>
+                  <label class="is-size-5">Fruits</label>
+
+                  <br />
+                  <label>
+                    <input type="checkbox" />
+                    Low-Carb
+                  </label>
+
+                  <label class="checkbox">
+                    <input type="checkbox" />
+                    High-Protein
+                  </label>
+
+                  <label class="checkbox">
+                    <input type="checkbox" />
+                    High-Fiber
+                  </label>
+                </div>
+                <br />
+                <div class="container cuisine" >
+                    <div>
+                      <label class="is-size-5">Cuisine </label>
+    
+                      <br />
+                      <label>
+                        <input type="checkbox" />
+                        Asian
+                      </label>
+    
+                      <label class="checkbox">
+                        <input type="checkbox" />
+                        American
+                      </label>
+    
+                      <label class="checkbox">
+                        <input type="checkbox" />
+                        Indian
+                      </label>
+                    </div>
+                    <br/>
+                    <div class="container meal_type" >
+                        <div>
+                          <label class="is-size-5">Meal Type</label>
+        
+                          <br />
+                          <label class="checkbox">
+                            <input type="checkbox" />
+                            Breakfast
+                          </label>
+                          <label>
+                            <input type="checkbox" />
+                            Lunch
+                          </label>
+        
+                          <label class="checkbox">
+                            <input type="checkbox" />
+                            Dinner
+                          </label>
+        
+                        
+                        </div>
+                        </div>
+                        <br/>
+                        <div>
+                            <label class="is-size-5">Calories</label>
+                            <input class="slider is-fullwidth is-small is-circle" step="1" min="0" max="100" value="50" type="range"/>
+                        </div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="line"></div>
+        <div class="tile is-parent is-vertical is-9 ">
+          <article class="tile is-child notification recipe_section">
+            <div class="content">
+              <p class="title">Recipes</p>
+              <p class="subtitle">With even more content</p>
+              <div class="content">
+                <!-- Content -->
+              </div>
+              <div class="card_container">
+                <div class="card g" >
+                    <div class="image is-1by1" >
+                      <!-- <figure class="image is-1by1"> -->
+                        <img src="https://www.acouplecooks.com/wp-content/uploads/2019/05/Chopped-Salad-001_1.jpg" alt="Placeholder image">
+                      <!-- </figure> -->
+                    </div>
+                    <div class="card-content is-overlay">
+                       <span class="tile r is-primary"><span class="bottom">Title</span></span>
+                    </div>
+                  </div>
+                
+                  	<div class="card">
+			<header class="card-header">
+				<p class="card-header-title">
+					Component
+				</p>
+				<a href="#" class="card-header-icon" aria-label="more options">
+      <span class="icon">
+        <i class="fas fa-angle-down" aria-hidden="true"></i>
+      </span>
+    </a>
+			</header>
+			<div class="card-content">
+				<div class="content">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+					<a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
+					<br>
+					<time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
+				</div>
+			</div>
+			<footer class="card-footer">
+				<a href="#" class="card-footer-item">Save</a>
+				<a href="#" class="card-footer-item">Edit</a>
+				<a href="#" class="card-footer-item">Delete</a>
+			</footer>
+		</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
