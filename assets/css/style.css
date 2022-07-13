@@ -1,5 +1,6 @@
 * {
   color: #fefefe;
+  font-family: "Poppins";
 }
 html {
   background-color: black;
@@ -60,10 +61,12 @@ header {
   height: 10%;
   width: 100%;
   padding: 0;
+  font-size: 16px;
 }
 .bottom {
   position: absolute;
   /* background-color: green; */
+  font-size: 26px;
   bottom: 0;
   height: 100%;
   width: 100%;
